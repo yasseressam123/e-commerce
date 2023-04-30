@@ -1,0 +1,10 @@
+<p-dialog header="Delete" [closable]="false" [modal]="true" [(visible)]="ModalDisplay" [style]="{width: '360px'}">
+    <div class="flex align-items-center mb-4">
+      <i class="pi pi-info-circle me-2"></i>
+      <p>{{text}}</p>
+    </div>
+    <div class="flex justify-content-center">
+      <button pButton type="button" label="Delete" class="me-3 p-button-danger" (click)="handleDeleteModel()" [loading]="isLoading"></button>
+      <button pButton type="button" label="Cancel" (click)="hideModal()" ></button>
+    </div>
+</p-dialog>

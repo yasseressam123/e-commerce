@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { AdminViewRoutingModule } from './admin-view-routing.module';
 import { AdminViewComponent } from './admin-view.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 
 @NgModule({
   declarations: [
-    AdminViewComponent
+    AdminViewComponent,
+    AdminDashboardComponent
   ],
   imports: [
     CommonModule,

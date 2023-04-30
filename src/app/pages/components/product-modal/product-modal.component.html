@@ -1,0 +1,97 @@
+<!-- <p-dialog header="Add New Product" [modal]="true" [(visible)]="ModalDisplay" [maximizable]="true" [style]="{width: '50vw'}">
+    <form [formGroup]="createForm" (ngSubmit)="createStore()">
+      <div class="sec-input">
+        <p class="title">Details</p>
+        <div class="inputs-cont">
+          <div class="input-cont">
+            <label for="">Name</label>
+            <input type="text" pInputText [style]="{width: '100%'}"  formControlName="name"/>
+          </div>
+          <div class="input-cont">
+            <label for="">Contact Number</label>
+            <input type="text" pattern='(?:\+?0*?966)?0?(5[0-9]{8}|[0-9]{9}|[0-9]{10})$' pInputText [style]="{width: '100%'}" name="mobile" formControlName="mobile"/>
+            <p class="error" *ngIf="createForm.get('mobile')?.invalid && (createForm.get('mobile')?.dirty || createForm.get('mobile')?.touched)">* Number is invalid</p>
+          </div>
+        </div>
+        <div class="inputs-cont">
+          <div class="input-cont">
+            <label for="">Opening Time</label>
+            <p-calendar [timeOnly]="true" [style]="{width: '100%'}" ></p-calendar>
+          </div>
+          <div class="input-cont">
+            <label for="">Closing Time</label>
+            <p-calendar [timeOnly]="true" [style]="{width: '100%'}" ></p-calendar>
+          </div>
+        </div>
+        <div class="inputs-cont">
+          <div class="input-cont">
+            <label for="">Amenities</label>
+            <input type="text" pInputText [style]="{width: '100%'}"  formControlName="amenities"/>
+          </div>
+        </div>
+      </div>
+      <div class="sec-input">
+        <p class="title">Logo</p>
+        <p class="image-size">*Supported format JPEG & PNG (max 5MB)</p>
+        <p-fileUpload name="myfile[]"
+        [customUpload]="true"
+        [multiple]="false"
+        [maxFileSize]="5000000"
+        invalidFileSizeMessageSummary="Image should be max 5MB"
+        [showUploadButton]="true"
+        [showCancelButton]="false"
+        (uploadHandler)="logoUploader($event)"></p-fileUpload>
+      </div>
+      <div class="sec-input">
+        <p class="title">Pictures</p>
+        <p class="image-size">*Supported format JPEG & PNG (max 5MB)</p>
+        <p-fileUpload name="myfile[]"
+        [customUpload]="true"
+        [maxFileSize]="5000000"
+        invalidFileSizeMessageSummary="Image should be max 5MB"
+        [showUploadButton]="false"></p-fileUpload>
+      </div>
+      <div class="sec-input">
+        <p class="title">Store Address</p>
+        <div class="inputs-cont">
+          <div  class="input-cont" style="flex: 0 0 100%;">
+            <label for="">Location</label>
+            <input ngx-google-places-autocomplete pInputText [style]="{width: '100%'}" [(ngModel)]="formattedaddress" [ngModelOptions]="{standalone: true}" [options]='options' (onAddressChange)="AddressChange($event)"/>
+          </div>
+        </div>
+        <div class="inputs-cont">
+          <div class="input-cont">
+            <label for="">District</label>
+            <input type="text" [(ngModel)]="district" pInputText [style]="{width: '100%'}" [ngModelOptions]="{standalone: true}"/>
+          </div>
+          <div class="input-cont">
+            <label for="">State</label>
+            <input type="text" pInputText [(ngModel)]="state" [style]="{width: '100%'}" [ngModelOptions]="{standalone: true}" />
+          </div>
+        </div>
+        <div class="inputs-cont">
+          <div class="input-cont">
+            <label for="">Pincode</label>
+            <input type="text" pInputText [(ngModel)]="pincode" [style]="{width: '100%'}" [ngModelOptions]="{standalone: true}"  />
+          </div>
+          <div class="input-cont">
+            <label for="">Country</label>
+            <input type="text" pInputText [style]="{width: '100%'}" [(ngModel)]="country" [ngModelOptions]="{standalone: true}" />
+          </div>
+        </div>
+      </div>
+      <div class="sec-input">
+        <p class="title">Item Gallery</p>
+        <p class="image-size">*Supported format JPEG & PNG (max 5MB)</p>
+        <p-fileUpload name="myfile[]"
+        [customUpload]="true"
+        [maxFileSize]="5000000"
+        invalidFileSizeMessageSummary="Image should be max 5MB"
+        [showUploadButton]="false"></p-fileUpload>
+      </div>
+  
+      <div class="mt-3 flex justify-content-end">
+        <button [disabled]="!createForm.valid" [loading]="isLoading" pButton type="submit" label="Submit" ></button>
+      </div>
+    </form>
+</p-dialog> -->
